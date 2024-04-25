@@ -1,4 +1,5 @@
-import React, { useState } from 'react'; // Add this line to import useState
+import React, { useState } from 'react'; // import useState
+import { Link } from 'react-router-dom'; // import Link
 
 export default function LogIn() {
   const [email, setEmail] = useState('');
@@ -63,7 +64,7 @@ export default function LogIn() {
         </div>
       </form>
       <p className="mt-2 text-center text-sm text-gray-600">
-        Don't have an account? <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">Sign up</a>
+        Don't have an account? <Link to="/sign-up" className="font-medium text-indigo-600 hover:text-indigo-500">Sign up</Link>
       </p>
     </div>
   </div>

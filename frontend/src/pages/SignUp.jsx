@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { validateEmail, validatePassword, validateRequiredFields } from './validators';
+import { Link } from 'react-router-dom';
 
 export default function SignUp() {
   const [formData, setFormData] = useState({
@@ -249,6 +250,12 @@ export default function SignUp() {
           Sign Up
         </button>
       </form>
+      <div>
+      {/* ... rest of your form */}
+      <p className="mt-2 text-center text-sm text-gray-600">
+        Already have an account? <Link to="/log-in" className="font-medium text-indigo-600 hover:text-indigo-500">Log in here</Link>
+      </p>
+    </div>
     </div>
   );
 }
