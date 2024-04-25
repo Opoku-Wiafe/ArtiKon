@@ -48,10 +48,10 @@ export default function SignUp() {
       { value: formData.profilePhoto, name: 'Profile Photo' },
     ], newErrors);
 
-    // This code Validate email
+    // Validate email
     newErrors = validateEmail(formData.email, newErrors);
 
-    // This code Validate password
+    // Validate password
     newErrors = validatePassword(formData.password, formData.confirmPassword, newErrors);
 
     setErrors(newErrors);
@@ -63,7 +63,11 @@ export default function SignUp() {
   };
 
   return (
-    <div className="container mx-auto p-4 pt-6 pb-8 bg-white rounded shadow-md">
+    <div className="container mx-auto p-4 pt-6 pb-8 bg-white rounded shadow-md text-gray-900">
+      {/* Heading Label */}
+      <h2 className="text-2xl font-semibold text-center mb-4">Sign Up</h2>
+
+      {/* Form */}
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
         {/* Name */}
         <label className="block mb-2">
@@ -210,7 +214,7 @@ export default function SignUp() {
           <input
             type="password"
             name="confirmPassword"
-            placeholder = "confirm your Password"
+            placeholder="Confirm your Password"
             value={formData.confirmPassword}
             onChange={handleChange}
             className="w-full p-2 pl-10 text-sm text-gray-700 border rounded"
@@ -250,12 +254,16 @@ export default function SignUp() {
           Sign Up
         </button>
       </form>
-      <div>
-      {/* ... rest of your form */}
-      <p className="mt-2 text-center text-sm text-gray-600">
-        Already have an account? <Link to="/log-in" className="font-medium text-indigo-600 hover:text-indigo-500">Log in here</Link>
-      </p>
-    </div>
+
+      {/* Back to Login */}
+      <div className="text-center mt-4">
+        <p className="text-sm text-gray-600">
+          Already have an account?{' '}
+          <Link to="/log-in" className="font-medium text-indigo-600 hover:text-indigo-500">
+            Log in here
+          </Link>
+        </p>
+      </div>
     </div>
   );
-}
+};
