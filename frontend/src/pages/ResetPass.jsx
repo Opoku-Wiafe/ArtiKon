@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { validateEmail } from './validators';
 import { Link } from 'react-router-dom';
+import './misc.css'; //CSS for font and others
 
 export default function ResetPass() {
   const [email, setEmail] = useState('');
@@ -21,7 +22,7 @@ export default function ResetPass() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
+    <div className="flex flex-col justify-center items-center h-screen roboto-font">
       <div className="w-full max-w-md mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <h1 className="text-2xl font-bold mb-5 text-center">Reset Password</h1>
         <input 

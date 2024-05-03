@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { validateEmail, validatePassword, validateRequiredFields } from './validators';
 import { Link } from 'react-router-dom';
+import './misc.css'; //CSS for font and others
 
 export default function SignUp() {
   const [formData, setFormData] = useState({
@@ -63,7 +64,7 @@ export default function SignUp() {
   };
 
   return (
-    <div className="container mx-auto p-4 pt-6 pb-8 bg-white rounded shadow-md text-gray-900">
+    <div className="container mx-auto p-4 pt-6 pb-8 bg-white rounded shadow-md text-gray-900 roboto-font">
       {/* Heading Label */}
       <h2 className="text-2xl font-semibold text-center mb-4">Sign Up</h2>
 
@@ -78,7 +79,7 @@ export default function SignUp() {
             placeholder="Your Full Name Here..."
             value={formData.name}
             onChange={handleChange}
-            className="w-full p-2 pl-10 text-sm text-gray-700 border rounded"
+            className="w-full p-2 pl-10 text-sm text-gray-700 border rounded focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10"
             required
           />
           {errors.name && (
@@ -94,7 +95,7 @@ export default function SignUp() {
             name="dob"
             value={formData.dob}
             onChange={handleChange}
-            className="w-full p-2 pl-10 text-sm text-gray-700 border rounded"
+            className="w-full p-2 pl-10 text-sm text-gray-700 border rounded focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10"
             required
           />
           {errors.dob && (
@@ -109,7 +110,7 @@ export default function SignUp() {
             name="gender"
             value={formData.gender}
             onChange={handleChange}
-            className="w-full p-2 pl-10 text-sm text-gray-700 border rounded"
+            className="w-full p-2 pl-10 text-sm text-gray-700 border rounded focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10"
             required
           >
             <option value="">Select</option>
@@ -131,7 +132,7 @@ export default function SignUp() {
             placeholder="Phone Number Here..."
             value={formData.phone}
             onChange={handleChange}
-            className="w-full p-2 pl-10 text-sm text-gray-700 border rounded"
+            className="w-full p-2 pl-10 text-sm text-gray-700 border rounded focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10"
             required
           />
           {errors.phone && (
@@ -146,7 +147,7 @@ export default function SignUp() {
             name="userType"
             value={formData.userType}
             onChange={handleChange}
-            className="w-full p-2 pl-10 text-sm text-gray-700 border rounded"
+            className="w-full p-2 pl-10 text-sm text-gray-700 border rounded focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10"
             required
           >
             <option value="">Select</option>
@@ -168,7 +169,7 @@ export default function SignUp() {
             placeholder="Your Email goes Here..."
             value={formData.email}
             onChange={handleChange}
-            className="w-full p-2 pl-10 text-sm text-gray-700 border rounded"
+            className="w-full p-2 pl-10 text-sm text-gray-700 border rounded focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10"
             required
           />
           {errors.email && (
@@ -184,7 +185,7 @@ export default function SignUp() {
             placeholder="Tell Us About You and What You Do..."
             value={formData.bio}
             onChange={handleChange}
-            className="w-full p-2 pl-10 text-sm text-gray-700 border rounded"
+            className="w-full p-2 pl-10 text-sm text-gray-700 border rounded focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10"
           />
           {errors.bio && (
             <div className="text-red-500 text-xs">{errors.bio}</div>
@@ -200,7 +201,7 @@ export default function SignUp() {
             placeholder="Enter Your Password Here..."
             value={formData.password}
             onChange={handleChange}
-            className="w-full p-2 pl-10 text-sm text-gray-700 border rounded"
+            className="w-full p-2 pl-10 text-sm text-gray-700 border rounded focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10"
             required
           />
           {errors.password && (
@@ -217,7 +218,7 @@ export default function SignUp() {
             placeholder="Confirm your Password"
             value={formData.confirmPassword}
             onChange={handleChange}
-            className="w-full p-2 pl-10 text-sm text-gray-700 border rounded"
+            className="w-full p-2 pl-10 text-sm text-gray-700 border rounded focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10"
             required
           />
           {errors.confirmPassword && (
