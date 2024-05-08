@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './misc.css'; //CSS for font and otherstuff
 
-export default function ChooseNewPass() {
+export default function ResetPassword() {
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');

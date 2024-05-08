@@ -51,7 +51,7 @@ export default function LogIn() {
           </div>
         </div>
         <div className="flex items-center justify-end">
-          <Link to="/reset-pass" className="font-medium text-indigo-600 hover:text-indigo-500">
+          <Link to="/forgot-password" className="font-medium text-indigo-600 hover:text-indigo-500">
             Forgot your password?
           </Link>
         </div>
